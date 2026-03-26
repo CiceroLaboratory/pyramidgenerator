@@ -1,53 +1,30 @@
 # FREE CODE CAMP PROJECT
 
+# JavaScript is a powerful scripting language that you can use to make web pages interactive. It's one of the core technologies of the web, along with HTML and CSS. All modern browsers support JavaScript.
 
-## JavaScript is a powerful scripting language that you can use to make web pages interactive. It's one of the core technologies of the web, along with HTML and CSS. All modern browsers support JavaScript.
-
-## In this practice project, you'll learn fundamental programming concepts in JavaScript by coding your own Pyramid Generator. You'll learn how to work with arrays, strings, functions, loops, if/else statements, and more.
+# In this practice project, you'll learn fundamental programming concepts in JavaScript by coding your own Pyramid Generator. You'll learn how to work with arrays, strings, functions, loops, if/else statements, and more.
 
 # Step 1
 ## JavaScript is the programming language that powers the web. Unlike the HTML and CSS you have learned previously, JavaScript is most commonly used to write logic instead of markup.
-
 ## In this project, you will learn the basics of JavaScript and apply those concepts to building a pyramid generator.
-
 ## A pyramid generator is a program where you can set the type of character, the count for the pyramid, and the direction of the pyramid. The program will then generate a pyramid based on those inputs.
-
 ## Click on the "Check your code" button to proceed to the next step and start the project.
-
-
 
 # Step 2
 ## One of the most important concepts in programming is variables. A variable points to a specific memory address that stores a value. Variables are given a name which can be used throughout your code to access that value.
-
 ## Declaring a variable means giving it a name. In JavaScript, this is often done with the let keyword. For example, here is how you would declare a hello variable:
-
 ## let hello;
 ## Variable naming follows specific rules: names can include letters, numbers, dollar signs, and underscores, but cannot contain spaces and must not begin with a number.
-
 ## Use the let keyword to declare a variable called character.
-
 ## Note: It is common practice to end statements in JavaScript with a semicolon. ;
-
 
 ## Step 3
 ## Your character variable currently does not have a value. You can assign a value using the assignment operator =. For example:
-
 ## Example Code
 ## let hello = "Hello";
 ## Assigning a value to a variable at the moment of its declaration is known as initialization.
-
 ## Initialize your character variable by assigning it the value "Hello" during its declaration.
 
-
-
-# Step 3
-## Your character variable currently does not have a value. You can assign a value using the assignment operator =. For example:
-
-## Example Code
-## let hello = "Hello";
-## Assigning a value to a variable at the moment of its declaration is known as initialization.
-
-## Initialize your character variable by assigning it the value "Hello" during its declaration.
 
 
 
@@ -416,3 +393,297 @@
 
 # Step 50
 ## Now add a log statement to print the value of your call variable.
+
+# Step 51
+## Your call variable has an undefined value, even though you defined it! This is because your padRow function does not currently return a value. By default, functions return undefined as their value.
+
+## In order to return something else, you need to use the return keyword. Here is an example of a function that returns the string "Functions are cool!":
+
+### function demo() {
+###  return "Functions are cool!";
+### }
+## Use the return keyword to have your function return the string "Hello!".
+
+# Step 52
+## When you have a value that is explicitly written in your code, like the "Hello!" string in your function, it is considered to be hard-coded. Hard-coding a value inside a function might not make it as reusable as you'd like.
+
+## Instead, you can define parameters for the function. Parameters are special variables that are given a value when you call the function, and can be used in your function to dynamically change the result of the function's code.
+
+## To add a parameter to your function, you need to add a variable name inside the parentheses. For example, this demo function has a name parameter:
+
+## Example Code
+### function demo(name) {
+
+### }
+# name sounds like a useful parameter, so go ahead and add it to your padRow function.
+
+# Step 54
+## If you open your console again, you'll see that your padRow function is returning undefined, even though you defined a return value! This is because parameters need to be given a value when you call the function.
+## When you pass a value to a function call, that value is referred to as an argument. Here is an example of calling a demo function and passing "Naomi" as the argument for the name parameter.
+
+## Example Code
+### function demo(name) {
+###  return name;
+### }
+### demo("Naomi");
+## Pass your own name as the argument for the name parameter in your padRow call. Remember that your name is a string, so you'll need to use quotes.
+
+
+# Step 55
+## Before moving on, take a moment to review how functions work.
+## Declare a function named addTwoNumbers. This function should take two arguments and return the sum of those two arguments.
+## Your function should not use hard-coded values. An example of a hard-coded function might be:
+
+## Example Code
+### function sayName(firstName, lastName) {
+###   return "John Doe";
+### }
+
+### sayName("Camper", "Cat");
+## This function would return "John Doe" regardless of the arguments passed to the parameters firstName, and lastName, so "John Doe" is considered a hard-coded value.
+
+## Declare a sum variable and assign it the value of calling your addTwoNumbers function with 5 and 10 as the arguments. Log the sum variable to the console.
+
+# Step 55
+## Before moving on, take a moment to review how functions work.
+## Declare a function named addTwoNumbers. This function should take two arguments and return the sum of those two arguments.
+## Your function should not use hard-coded values. An example of a hard-coded function might be:
+
+## Example Code
+### function sayName(firstName, lastName) {
+###  return "John Doe";
+### }
+
+### sayName("Camper", "Cat");
+## This function would return "John Doe" regardless of the arguments passed to the parameters firstName, and lastName, so "John Doe" is considered a hard-coded value.
+## Declare a sum variable and assign it the value of calling your addTwoNumbers function with 5 and 10 as the arguments. Log the sum variable to the console.
+
+# Step 56
+## With that quick review complete, you should remove your addTwoNumbers function, sum variable, and log statement.
+
+# Step 57
+## Variables in JavaScript are available in a specific scope. In other words, where a variable is declared determines where in your code it can be used.
+## The first scope is the global scope. Variables that are declared outside of any "block" like a function or for loop are in the global scope. Your character, count, and rows variables are all in the global scope.
+## When a variable is in the global scope, a function can access it in its definition. Here is an example of a function using a global title variable:
+
+## Example Code
+### const title = "Professor ";
+### function demo(name) {
+###  return title + name;
+### }
+### demo("Naomi")
+## This example would return "Professor Naomi". Update your padRow function to return the value of concatenating your character variable to the beginning of the name parameter.
+
+# Step 58
+## Variables can also be declared inside a function. These variables are considered to be in the local scope, or block scope. A variable declared inside a function can only be used inside that function. If you try to access it outside of the function, you get a reference error.
+
+## To see this in action, use const to declare a test variable in your padRow function. Initialise it with the value "Testing".
+
+## Then, below your function, try to log test to the console. You will see an error because it is not defined outside of the function's local scope. Remove that console.log to pass the tests and continue
+
+# Step 59
+## Values returned out of a function are used by calling the function. You can use the function call directly as the value it returns, or capture the returned value in a variable. This way, you can use the value assigned to a locally scoped variable, outside the function it was created in.
+
+## Example Code
+### function getName() {
+###  const name = "Camper cat";
+###  return name;
+### }
+
+### console.log(getName()); // "Camper cat"
+
+### const capturedReturnValue = getName();
+### console.log(capturedReturnValue); // "Camper cat"
+
+## console.log(name); // reference error
+## To use your "Testing" value, return it out of the padRow function by updating your return statement to return only the test variable.
+
+# Step 60
+## Below the return statement, log the string "This works!" to the console.
+
+## After doing that, you will see that the string "This works!" does not display in the console, and the console.log("This works!") line is greyed out.
+## Copy the console log and paste it above the return statement. Now, the string "This works!" should appear in the console.
+## An important thing to know about the return keyword is that it does not just define a value to be returned from your function, it also stops the execution of your code inside a function or a block statement. This means any code after a return statement will not run.
+
+# Step 61
+## Now your call variable has the value "Testing". But your function is no longer using the name parameter.
+
+## Remove the name parameter from your function declaration, then remove your "CamperChan" string from the padRow call.
+
+## Also, remove both console.log from the padRow function.
+
+# Step 62
+## Because your function was no longer using the parameter, changing the argument did not affect it.
+## Go ahead and remove the test declaration and return statement from your padRow function, so the function is empty again.
+
+# Step 63
+## As expected, your function now returns undefined again. Your call variable is not necessary any more, so remove the call declaration and the console.log for the call variable.
+
+# Step 64
+## In order to know how to format a row, your padRow function will need to know which row number you are on, and how many rows in total are being generated.
+## The best way to do this is by creating function parameters for them. Give your padRow function a rowNumber and rowCount parameter. Multiple parameters are separated by a comma:
+
+### Example Code
+### function name(first, second) {
+
+### }
+
+
+# Step 65
+## Remember in an earlier step, you learned about return values. A function can return a value for your application to consume separately.
+## In a function, the return keyword is used to specify a return value. For example, this function would return the value given to the first parameter:
+
+## Example Code
+### function name(parameter) {
+###  return parameter;
+### }
+## Use the return keyword to return the value of the character variable, repeated rowNumber times.
+
+# Step 66
+## A function call allows you to actually use a function. You may not have been aware of it, but the methods like .push() that you have been using have been function calls.
+## A function is called by referencing the function's name, and adding (). Here's how to call a test function:
+
+## Example Code
+###  test();
+## Replace the character.repeat(i + 1) in your .push() call with a function call for your padRow function. Do not add any arguments to it yet
+
+# Step 67
+## Your padRow function has two parameters which you defined. Values are provided to those parameters when a function is called.
+## The values you provide to a function call are referred to as arguments, and you pass arguments to a function call. Here's a function call with "Hello" passed as an argument:
+
+## Example Code
+### test("Hello");
+## Pass i + 1 and count as the arguments to your padRow call. Like parameters, arguments are separated by a comma.
+
+# Step 68
+## You should now see the same bunch of characters in your console. Your padRow function is doing the exact same thing you were doing earlier, but now it's in a reusable section of its own.
+
+## Use the addition operator to concatenate a single space " " to the beginning and end of your repeated character string.
+
+## Remember that you can use the + operator to concatenate strings like this:
+
+## Example Code
+## " " + "string"
+
+# Step 69
+## Now it is time for a bit of math. Consider a three-row pyramid. If we want it centered, it would look something like:
+
+## Example Code
+### ··#··
+### ·###·
+### #####
+### Empty spaces have been replaced with interpuncts, or middle dots, for readability. If you extrapolate the pattern, you can see that the spaces at the beginning and end of a row follow a pattern.
+## Update your blank space strings to be repeated rowCount - rowNumber times.
+## Open up the console to see the result.
+
+# Step 70
+## You can pass full expressions as an argument. The function will receive the result of evaluating that expression. For example, these two function calls below would yield the same result. (Note that the order of operations rule PEMDAS—Parenthesis, Exponents, Multiplication, Division, Addition, Subtraction—applies):
+
+## Example Code
+### test(2 * 3 + 1);
+### test(7);
+## Looking at the pattern again:
+## Example Code
+## Update the character value to be repeated 2 * rowNumber - 1 times.
+## Open up the console again to see the updated result.
+
+
+# Step 71
+## Your pyramid generator now functions as expected. But this is an excellent opportunity to further explore the code you have written.
+
+## The addition operator is not the only way to add values to a variable. The addition assignment operator can be used as shorthand to mean "take the original value of the variable, add this value, and assign the result back to the variable." For example, these two statements would yield the same result:
+
+## Example Code
+### test = test + 1;
+### test += 1;
+## Update your iteration statement in the for loop to use addition assignment.
+
+# Step 72
+## Because you are only increasing i by 1, you can use the increment operator ++. This operator increases the value of a variable by 1, updating the assignment for that variable. For example, test would become 8 here:
+
+## Example Code
+### let test = 7;
+### test++;
+## Replace your addition assignment with the increment operator for your loop iteration.
+
+# Step 73
+##  Rather than having to pass i + 1 to your padRow call, you could instead start your loop at 1. This would allow you to create a one-indexed loop.
+## Update your iterator to start at 1 instead of 0.
+
+# Step 74
+## The pyramid looks a little funny now. Because you are starting the loop at 1 instead of 0, you do not need to add one to i when you pass it to padRow.
+# Update the first argument of your padRow call to be i.
+
+# Step 75
+## Unfortunately, now the bottom of the pyramid has disappeared. This is because you have created another off-by-one error.
+## Your original loop went for i values from 0 to 7, because count is 8 and your condition requires i to be less than count. Your loop is now running for i values from 1 to 7.
+## Your loop needs to be updated to run when i is 8, too. Looking at your logic, this means your loop should run when i is less than or equal to count. You can use the less than or equal to operator <= for this.
+## Update your loop condition to run while i is less than or equal to count.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

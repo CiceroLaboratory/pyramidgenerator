@@ -180,27 +180,113 @@ const call = padRow();
 // Step 50
 console.log(call);
 
+// Step 51
+return  "Hello!";
 
+// Step 52
+function padRow(name) {
+  return "name";
+}
 
+// Step 53
+// parameter added
 
+// Step 54
+call = padRow("Cícero");
 
+// Step 55
+function addTwoNumbers(a, b){
+  return  a + b
+}
 
+const sum = addTwoNumbers(5,10)
+console.log(sum)
 
+// Step 56
+// removed addNumbers function
 
+// Step 57
+function padRow(name) {
+  return character + name;
+}
 
+// Step 58
+const  test = "Testing";
 
+// Step 59
+  return test;
 
+// Step 60
+  function padRow(name) {
+  const test = "Testing";
+  console.log("This works!");
+  return test;
+  console.log("This works!"); 
+}
 
+// Step 61
+function padRow() {
+  const test = "Testing";
+  return test;
+}
+padRow();
 
+// Step 62
+function padRow() {
+}
+padRow();
 
+// Step 63
+//a call declaration has been removed.
 
+// Step 64
+function padRow(rowNumber, rowCoun) {
+}
 
+// Step 65
+  return character.repeat(rowNumber);
 
+// Step 66
+  for (let i = 0; i < count; i = i + 1) {
+  rows.push(padRow())
+  padRow
+}
 
+// Step 67
+for (let i = 0; i < count; i = i + 1) {
+  rows.push(padRow(i+1, count))
+}
 
+// Step 68
+function padRow(rowNumber, rowCount) {
+  return " " + character.repeat( rowNumber)+ " ";
+}
 
+// Step 69
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(rowNumber) + " ".repeat(rowCount - rowNumber);
+}
 
+// Step 70
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+// Step 71
+for (let i = 0; i < count; i +=1) {}
 
+// Step 72
+for (let i = 0; i < count; i +=1) {}
 
+// Step 73
+for (let i = 1; i < count; i++) {
+  rows.push(padRow(i + 1, count));
+}
 
-
+// Step 74
+for (let i = 1; i < count; i++) {
+  rows.push(padRow(i , count));
+} 
+// Step 75
+for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}
